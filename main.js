@@ -11,8 +11,12 @@ $(document).ready(function() {
     // change todo/done
     $(".list").on('click', '.todo-label', function(e) {
           if($(this).find('input:checkbox').is(':checked')) {
+          	var eachTodo = $(this).parent("div");
+          	var carbon = eachTodo.clone();
               $(this).css("text-decoration","line-through");
               $(this).css("color","#999999");
+              $('#completed-list').prepend(carbon);
+              eachTodo.remove();
 		  }
 		  else {
               $(this).css("text-decoration","none");

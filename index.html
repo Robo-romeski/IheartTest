@@ -13,24 +13,24 @@
 <div id="todo-app">
 
 <div class="list">
+<h2>Pending</h2>	
     <div class="todo">
     <label class="todo-label">
-    <input type="checkbox" value="">Call mom</label>
+    <input type="checkbox" value="">10 am Conference call</label>
     <a href="#" class="remove">x</a>
     </div>
     <div class="todo"><label class="todo-label">
-    <input type="checkbox" value="">Go to bank</label>
+    <input type="checkbox" value="">Stand-Up meeting</label>
     <a href="#" class="remove">x</a>
     </div>
     <div class="todo">
     <label class="todo-label">
-    <input type="checkbox" value="">Buy milk</label>
+    <input type="checkbox" value="">Representative reviews</label>
     <a href="#" class="remove">x</a>
     </div>
     <div id="todo completed">
 <h2>Completed Tasks</h2>
-<ul id="completed-list">
-</ul>
+<div id="completed-list"></div>
 <div id="new-todo" title="Add to-do item">
 </div>
 </div>
@@ -46,14 +46,18 @@
 		<input type="text" name="task" id="task">
 	</p>
 	<p>
-		<label for="due-date">Due Date:</label>
-		<input type="text" name="due-date" id="due-date">
+	<label for="task">Upload File:</label>
+		<div class="fileUploader" id="one"></div>
 	</p>
 </form> 
 </div></div></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="fileUploader.js"></script>
 <script src="main.js"></script>
+<script>
+	$(".fileUploader").fileUploader();
+</script>
 </body>
 </html>
