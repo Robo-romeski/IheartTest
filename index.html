@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>iHeart Media Todo Test</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<h1>To-Do List!</h1>
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".checkit">Add Item</button>
+<div id="todo-app">
+
+<div class="list">
+    <div class="todo">
+    <label class="todo-label">
+    <input type="checkbox" value="">Call mom</label>
+    <a href="#" class="remove">x</a>
+    </div>
+    <div class="todo"><label class="todo-label">
+    <input type="checkbox" value="">Go to bank</label>
+    <a href="#" class="remove">x</a>
+    </div>
+    <div class="todo">
+    <label class="todo-label">
+    <input type="checkbox" value="">Buy milk</label>
+    <a href="#" class="remove">x</a>
+    </div>
+    <div id="todo completed">
+<h2>Completed Tasks</h2>
+<ul id="completed-list">
+</ul>
+<div id="new-todo" title="Add to-do item">
+</div>
+</div>
+</div>
+
+<!-- <input type="text" id="new-todo" placeholder="What to do?"> -->
+<div id="new-todo" title="Add to-do item" class="modal fade checkit" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-md">
+<div class="modal-content slim">
+<form>
+	<p>
+		<label for="task">Task Name:</label>
+		<input type="text" name="task" id="task">
+	</p>
+	<p>
+		<label for="due-date">Due Date:</label>
+		<input type="text" name="due-date" id="due-date">
+	</p>
+</form> 
+</div></div></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
