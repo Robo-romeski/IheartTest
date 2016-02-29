@@ -17,17 +17,29 @@
     <div class="todo">
     <label class="todo-label">
     <input type="checkbox" value="">10 am Conference call</label>
-    <a href="#" class="upload">^</a><a href="#" class="remove">x</a>
-    </div>
+    <a href="#" class="upload" id="unlv">^</a><a href="#" class="remove">x</a>
+    
+        <div class="taskload">
+    <input type="file" id="myFile" multiple size="5" onchange="alert('file uploaded!');">
+    <p id="demo"></p>
+    </div></div>
     <div class="todo"><label class="todo-label">
     <input type="checkbox" value="">Stand-Up meeting</label>
-    <a href="#" class="upload">^</a><a href="#" class="remove">x</a>
-    </div>
+    <a href="#" class="upload" id="unlv">^</a><a href="#" class="remove">x</a>
+    
+        <div class="taskload">
+    <input type="file" id="myFile" multiple size="5" onchange="alert('file uploaded!');">
+    <p id="demo"></p>
+    </div></div>
     <div class="todo">
     <label class="todo-label">
     <input type="checkbox" value="">Representative reviews</label>
-    <a href="#" class="upload">^</a><a href="#" class="remove">x</a>
-    </div>
+    <a href="#" class="upload" id="unlv">^</a><a href="#" class="remove">x</a>
+    
+        <div class="taskload">
+    <input type="file" id="myFile" multiple size="5" onchange="alert('file uploaded!');">
+    <p id="demo"></p>
+    </div></div>
     <div id="todo completed">
 <h2>Completed Tasks</h2>
 <div id="completed-list"></div>
@@ -46,6 +58,7 @@
 		<label for="task">Task Name:</label>
 		<input type="text" name="task" id="new-todor">
 	</p>
+	
 	<button data-dismiss="modal" aria-label="Close" class="addTask btn btn-primary" id="addIt">Add Task</button>
 </form> 
 </div></div></div>
@@ -56,6 +69,20 @@
 <script src="main.js"></script>
 <script>
 	$(".fileUploader").fileUploader();
+	$('.upload').click(function(event) {
+		var target = $(this).parent().find('.taskload');
+    //$('.taskload').toggle('slow');
+    target.slideToggle();
+    $('.content').not(target).slideUp();
+	});
+
+	$('#unlv').on('click', '.upload', function() {
+
+
+console.log("solid");
+
+});
+
 </script>
 </body>
 </html>

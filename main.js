@@ -26,12 +26,14 @@ $(document).ready(function() {
  
      $("#addIt").click(function(event) {
      	inputContents = $.trim($("#new-todor").val());
+      uploadContents = $.trim($("#myFile").val());
      	if(inputContents != ""){
      		$(".list").prepend("<div class='todo'><label class='todo-label'><input type='checkbox' />" +
-                                    inputContents + "</label><a href='#' class='upload'>^</a><a href='#' class='remove'>x</a></div>")
+                                    inputContents + "</label><a href='#' class='upload' id='unlv'>^</a><a href='#' class='remove'>x</a><div class='taskload'><input type='file' id='myFile' multiple size='5'><p id='demo'></p></div></div>")
      	}
      	$("input").val(this.defaultValue);
      	$(this).modal("hide");
      	/* Act on the event */
      });
 });
+
