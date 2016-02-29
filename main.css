@@ -30,6 +30,7 @@ input[type=checkbox] {
 .fileLoader{
 	margin-left: 8rem;
 	padding-top: 2rem;
+	padding-bottom: 1rem;
 }
 #todo-app {
     background: #ffffff;
