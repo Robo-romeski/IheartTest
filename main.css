@@ -87,6 +87,19 @@ input[type=checkbox] {
     color: #800000;
     text-shadow: 0 0 5px #D9B2B2;
 }
+#todo-app .upload{
+	float: left;
+	font-weight: 700;
+	font-size: 10px;
+	color: #ffffff;
+}
+#todo-app .todo:hover .upload{
+	float: left;
+	color:blue;
+	font-weight: 700;
+	font-size: 18px;
+	text-shadow:0 0 5px #09B2B2;
+}
 .slim{
 	padding: 5rem;
 }

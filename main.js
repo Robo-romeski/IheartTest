@@ -23,18 +23,15 @@ $(document).ready(function() {
               $(this).css("color","#000000");
 		  }
     });
-  
-    // add todos on 'Enter' press
-    $('#new-todo').on('keypress', (function(e) {
-        if (e.which === EnterKey) {
-            // trim and read input
-            inputValue = $.trim($("input").val());
-            if (inputValue !== "" ) {
-                $(".list").prepend("<div class='todo'><label class='todo-label'><input type='checkbox' />" +
-                                   inputValue + "</label><a href='#' class='remove'>x</a></div>");
-            }
-            $("input").val(this.defaultValue);
-        }
-    }));
-
+ 
+     $("#addIt").click(function(event) {
+     	inputContents = $.trim($("#new-todor").val());
+     	if(inputContents != ""){
+     		$(".list").prepend("<div class='todo'><label class='todo-label'><input type='checkbox' />" +
+                                    inputContents + "</label><a href='#' class='upload'>^</a><a href='#' class='remove'>x</a></div>")
+     	}
+     	$("input").val(this.defaultValue);
+     	$(this).modal("hide");
+     	/* Act on the event */
+     });
 });

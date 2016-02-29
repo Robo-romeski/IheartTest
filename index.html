@@ -9,25 +9,24 @@
 </head>
 <body>
 <h1>To-Do List!</h1>
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".checkit">Add Item</button>
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".checkit">Add Items</button> 
 <div id="todo-app">
-<input type="text" id="new-todo" placeholder="What to do?">
 <h2>Pending</h2>
 <div class="list">
 	
     <div class="todo">
     <label class="todo-label">
     <input type="checkbox" value="">10 am Conference call</label>
-    <a href="#" class="remove">x</a>
+    <a href="#" class="upload">^</a><a href="#" class="remove">x</a>
     </div>
     <div class="todo"><label class="todo-label">
     <input type="checkbox" value="">Stand-Up meeting</label>
-    <a href="#" class="remove">x</a>
+    <a href="#" class="upload">^</a><a href="#" class="remove">x</a>
     </div>
     <div class="todo">
     <label class="todo-label">
     <input type="checkbox" value="">Representative reviews</label>
-    <a href="#" class="remove">x</a>
+    <a href="#" class="upload">^</a><a href="#" class="remove">x</a>
     </div>
     <div id="todo completed">
 <h2>Completed Tasks</h2>
@@ -37,7 +36,7 @@
 </div>
 </div>
 
-<!-- <input type="text" id="new-todo" placeholder="What to do?"> -->
+
 <div id="new-todo" title="Add to-do item" class="modal fade checkit" tabindex="-1" role="dialog">
 <div class="modal-dialog modal-md">
 <div class="modal-content slim">
@@ -45,13 +44,9 @@
 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	<p>
 		<label for="task">Task Name:</label>
-		<input type="text" name="task" id="new-todo">
+		<input type="text" name="task" id="new-todor">
 	</p>
-	<p>
-	<label for="task">Upload File:</label>
-		<div class="fileUploader" id="one"></div>
-	</p>
-	<button type="button" class="addTask btn btn-primary" id="addIt">Add Task</button>
+	<button data-dismiss="modal" aria-label="Close" class="addTask btn btn-primary" id="addIt">Add Task</button>
 </form> 
 </div></div></div>
 
