@@ -1,3 +1,5 @@
+var EnterKey = 13;
+
 $(document).ready(function() {
 
     // remove todos
@@ -23,18 +25,16 @@ $(document).ready(function() {
     });
   
     // add todos on 'Enter' press
-    // $('#new-todo').on('keypress', (function(e) {
-    // 	var taskName = $('#task').val();
-    // 	//var taskUpload = $
-    //     if (e.which === EnterKey) {
-    //         // trim and read input
-    //         inputValue = $.trim($("input").val());
-    //         if (inputValue !== "" ) {
-    //             $(".list").prepend("<div class='todo'><label class='todo-label'><input type='checkbox' />" +
-    //                                inputValue + "</label><a href='#' class='remove'>x</a></div>");
-    //         }
-    //         $("input").val(this.defaultValue);
-    //     }
-    // }));
+    $('#new-todo').on('keypress', (function(e) {
+        if (e.which === EnterKey) {
+            // trim and read input
+            inputValue = $.trim($("input").val());
+            if (inputValue !== "" ) {
+                $(".list").prepend("<div class='todo'><label class='todo-label'><input type='checkbox' />" +
+                                   inputValue + "</label><a href='#' class='remove'>x</a></div>");
+            }
+            $("input").val(this.defaultValue);
+        }
+    }));
 
 });
