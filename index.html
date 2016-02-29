@@ -71,13 +71,14 @@
 	$(".fileUploader").fileUploader();
 	$('.upload').click(function(event) {
 		var target = $(this).parent().find('.taskload');
-    //$('.taskload').toggle('slow');
     target.slideToggle();
     $('.content').not(target).slideUp();
 	});
 
-	$('#unlv').on('click', '.upload', function() {
-
+	$('.list').on('click', '.dynamo', function() {
+var target = $(this).parent().find('.taskload');
+    target.slideToggle();
+    $('.content').not(target).slideUp();
 
 console.log("solid");
 
